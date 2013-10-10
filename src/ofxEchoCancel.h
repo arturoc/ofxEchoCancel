@@ -8,8 +8,8 @@
 #ifndef OFXECHOCANCEL_H_
 #define OFXECHOCANCEL_H_
 
-#include "audio_processing.h"
-#include "module_common_types.h"
+#include "modules/audio_processing/interface/audio_processing.h"
+#include "modules/interface/module_common_types.h"
 #include "ofParameter.h"
 #include "ofConstants.h"
 #include "ofParameterGroup.h"

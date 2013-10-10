@@ -24,7 +24,7 @@ void ofxEchoCancel::setup(){
 
 	ap->echo_cancellation()->Enable(true);
 	ap->echo_cancellation()->set_suppression_level(webrtc::EchoCancellation::kHighSuppression);
-	ap->echo_cancellation()->enable_drift_compensation(true);
+	ap->echo_cancellation()->enable_drift_compensation(false);
 	ap->echo_cancellation()->set_device_sample_rate_hz(44100);
 
 	ap->gain_control()->Enable(true);
@@ -45,7 +45,7 @@ void ofxEchoCancel::setup(){
 	parameters.add(noiseSuppressionEnabled.set("noiseSuppressionEnabled",true));
 	parameters.add(highPassFilterEnabled.set("highPassFilterEnabled",true));
 	parameters.add(voiceDetectionEnabled.set("voiceDetectionEnabled",true));
-	parameters.add(driftCompensationEnabled.set("driftCompensationEnabled",true));
+	parameters.add(driftCompensationEnabled.set("driftCompensationEnabled",false));
 
 
 	echoCancelEnabled.addListener(this,&ofxEchoCancel::echoCancelEnabledChanged);
